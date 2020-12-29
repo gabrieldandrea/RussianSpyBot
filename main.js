@@ -34,6 +34,10 @@ client.on("message", message => {
         client.commands.get("wires").execute(message, args);
     } else if (command === "test") {
         client.commands.get("test").execute(message,args);
+    } else if (command === "button") {
+        client.commands.get("button").execute(message,args);
+    } else {
+        message.channel.send("Invalid Command");
     }
 });
 
