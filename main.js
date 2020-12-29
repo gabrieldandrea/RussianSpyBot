@@ -32,6 +32,8 @@ client.on("message", message => {
         client.commands.get("aboutfun").execute(message, args);
     } else if (command === "wires") {
         client.commands.get("wires").execute(message, args);
+    } else if (command === "test") {
+        client.commands.get("test").execute(message,args);
     }
 });
 
