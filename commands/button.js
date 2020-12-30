@@ -5,14 +5,14 @@ module.exports = {
         const filter = m => m.author.id === message.author.id;
         message.reply("Is the button blue and does it say 'Abort'? These messages will expire in 10 seconds").then(r => r.delete({ timeout: 10000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-            let input = collected.first().content;
+            let input = collected.first().content.toLowerCase();
 
             if (input === "cancel") {
                 return message.reply("Canceled");
             } else if (input === "yes") {
                 message.reply("Hold the button, what is the colour of the strip?").then(r => r.delete({ timeout: 10000 }));
                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                    let input = collected.first().content;
+                    let input = collected.first().content.toLowerCase();
 
                     return message.channel.send(stripColour(input));
                 }).catch(err => {
@@ -21,7 +21,7 @@ module.exports = {
             } else {
                 message.reply("Is there is more than 1 battery on the bomb and the button says 'Detonate'?").then(r => r.delete({ timeout: 10000 }));
                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                    let input = collected.first().content;
+                    let input = collected.first().content.toLowerCase();
 
                     if (input === "cancel") {
                         return message.reply("Canceled");
@@ -30,14 +30,14 @@ module.exports = {
                     } else {
                         message.reply("Is the button white and there is a lit indicator labelled 'CAR'?").then(r => r.delete({ timeout: 10000 }));
                         message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                            let input = collected.first().content;
+                            let input = collected.first().content.toLowerCase();
 
                             if (input === "cancel") {
                                 return message.reply("Canceled");
                             } else if (input === "yes") {
                                 message.reply("Hold the button, what is the colour of the strip?").then(r => r.delete({ timeout: 10000 }));
                                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                    let input = collected.first().content;
+                                    let input = collected.first().content.toLowerCase();
 
                                     return message.channel.send(stripColour(input));
                                 }).catch(err => {
@@ -46,7 +46,7 @@ module.exports = {
                             } else {
                                 message.reply("Are there are more than 2 batteries on the bomb and a lit indicator labelled 'FRK'?").then(r => r.delete({ timeout: 10000 }));
                                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                    let input = collected.first().content;
+                                    let input = collected.first().content.toLowerCase();
 
                                     if (input === "cancel") {
                                         return message.reply("Canceled");
@@ -55,14 +55,14 @@ module.exports = {
                                     } else {
                                         message.reply("Is the button yellow?").then(r => r.delete({ timeout: 10000 }));
                                         message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                            let input = collected.first().content;
+                                            let input = collected.first().content.toLowerCase();
 
                                             if (input === "cancel") {
                                                 return message.reply("Canceled");
                                             } else if (input === "yes") {
                                                 message.reply("Hold the button, what is the colour of the strip?").then(r => r.delete({ timeout: 10000 }));
                                                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                                    let input = collected.first().content;
+                                                    let input = collected.first().content.toLowerCase();
 
                                                     return message.channel.send(stripColour(input));
                                                 }).catch(err => {
@@ -71,7 +71,7 @@ module.exports = {
                                             } else {
                                                 message.reply("Is the button red and does it say 'Hold'?").then(r => r.delete({ timeout: 10000 }));
                                                 message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                                    let input = collected.first().content;
+                                                    let input = collected.first().content.toLowerCase();
 
                                                     if (input === "cancel") {
                                                         return message.reply("Canceled");
@@ -80,7 +80,7 @@ module.exports = {
                                                     } else {
                                                         message.reply("Hold the button, what is the colour of the strip?").then(r => r.delete({ timeout: 10000 }));
                                                         message.channel.awaitMessages(filter, { max: 1, time: 10000 }).then(collected => {
-                                                            let input = collected.first().content;
+                                                            let input = collected.first().content.toLowerCase();
         
                                                             return message.channel.send(stripColour(input));
                                                         }).catch(err => {

@@ -13,7 +13,7 @@ module.exports = {
 
         message.reply("Enter the symbols. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
-            let input = collected.first().content.split(" ");
+            let input = collected.first().content.toLowerCase().split(" ");
 
             if (input === "cancel") {
                 return message.reply("Canceled");
