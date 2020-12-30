@@ -36,6 +36,8 @@ client.on("message", message => {
         client.commands.get("test").execute(message,args);
     } else if (command === "button") {
         client.commands.get("button").execute(message,args);
+    } else if (command === "keypad") {
+        client.commands.get("keypad").execute(message,args);
     } else {
         message.channel.send("Invalid Command");
     }
