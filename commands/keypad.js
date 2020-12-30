@@ -18,30 +18,20 @@ module.exports = {
             if (input === "cancel") {
                 return message.reply("Canceled");
             } else {
-                var ans;
-
-                //fix check only works for the first array
-                var check = input.every((el) => {
-                    for (i = 0; i < bigarr.length; i++) {
-                        if ((bigarr[i].indexOf(el) !== -1)) {
-                            return ans = bigarr[i];
-                        }
-
-                    return ans = "Incorrect symbols";
+                for (i = 0; i < bigarr.length; i++) {
+                    if ((input.every(val => bigarr[i].includes(val))) == true) {
+                        input.sort(function(a, b) {
+                            return bigarr[i].indexOf(a) - bigarr[i].indexOf(b);
+                        });
+                        break;
                     }
-                });
 
-                check;
-
-                if (ans === "Incorrect symbols") {
-                    return message.channel.send(ans);
+                    if (i == bigarr.length - 1) {
+                        return message.channel.send("Incorrect symbols");
+                    }
                 }
 
-                input.sort(function(a, b) {
-                    return ans.indexOf(a) - ans.indexOf(b);
-                });
-
-                return message.reply("Press the symbols in this order: " + input.toString());
+                return message.channel.send("Press the symbols in this order: " + input.toString());
             }
 
         }).catch(err => {
