@@ -15,7 +15,7 @@ module.exports = {
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase().split(" ");
 
-            if (input === "cancel") {
+            if (input[0] === "cancel") {
                 return message.reply("Canceled");
             } else {
                 for (i = 0; i < bigarr.length; i++) {
