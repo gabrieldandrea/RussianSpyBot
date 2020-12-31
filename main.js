@@ -40,6 +40,10 @@ client.on("message", message => {
         client.commands.get("keypad").execute(message,args);
     } else if (command === "simonsays") {
         client.commands.get("simonsays").execute(message,args);
+    } else if (command === "help") {
+        client.commands.get("help").execute(message,args);
+    } else if (command === "keypadsymbols") {
+        client.commands.get("keypadsymbols").execute(message,args);
     } else {
         message.channel.send("Invalid Command");
     }
