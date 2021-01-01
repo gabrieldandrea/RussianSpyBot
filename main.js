@@ -26,26 +26,40 @@ client.on("message", message => {
     const args = message.content.slice(prefix.length).split(/ +/);
     const command = args.shift().toLowerCase();
 
-    if (command === "oldserver") {
-        client.commands.get("oldserver").execute(message, args);
-    } else if (command === "aboutfun") {
-        client.commands.get("aboutfun").execute(message, args);
-    } else if (command === "wires") {
-        client.commands.get("wires").execute(message, args);
-    } else if (command === "test") {
-        client.commands.get("test").execute(message,args);
-    } else if (command === "button") {
-        client.commands.get("button").execute(message,args);
-    } else if (command === "keypad") {
-        client.commands.get("keypad").execute(message,args);
-    } else if (command === "simonsays") {
-        client.commands.get("simonsays").execute(message,args);
-    } else if (command === "help") {
-        client.commands.get("help").execute(message,args);
-    } else if (command === "keypadsymbols") {
-        client.commands.get("keypadsymbols").execute(message,args);
-    } else {
-        message.channel.send("Invalid Command");
+    switch (command) {
+        case "oldserver":
+            client.commands.get("oldserver").execute(message, args);
+            break;
+        case "aboutfun":
+            client.commands.get("aboutfun").execute(message, args);
+            break;
+        case "wires":
+            client.commands.get("wires").execute(message, args);
+            break;
+        case "test":
+            client.commands.get("test").execute(message, args);
+            break;   
+        case "button":
+            client.commands.get("button").execute(message, args);
+            break;  
+        case "keypad":
+            client.commands.get("keypad").execute(message, args);
+            break;    
+        case "simonsays":
+            client.commands.get("simonsays").execute(message, args);
+            break;    
+        case "help":
+            client.commands.get("help").execute(message, args);
+            break;   
+        case "keypadsymbols":
+            client.commands.get("keypadsymbols").execute(message, args);
+            break;   
+        case "whosonfirst":
+            client.commands.get("whosonfirst").execute(message, args);
+            break;
+        default:
+            message.channel.send("Invalid Command");
+            break;
     }
 });
 
