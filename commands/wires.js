@@ -180,7 +180,7 @@ module.exports = {
 
                                     if (input === "cancel") {
                                         return message.reply("Canceled");
-                                    } else if (input === "yes") {
+                                    } else if (input === "no") {
                                         return message.reply("Cut the last wire");
                                     } else {
                                         return message.reply("Cut the fourth wire");
