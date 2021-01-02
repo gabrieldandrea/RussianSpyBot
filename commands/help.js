@@ -12,6 +12,7 @@ module.exports = {
 **!keypadsymbols** - Shows a list of each symbol and their respective codename
 **!simonsays** - Explains how to defuse simon says, input if the serial number contains a vowel and the number of strikes
 **!whosonfirst** - Explains how to defuse who's on first, input the display word and then the label on the button
+**!memory** - Explains how to defuse memory, input the display number and then the button labels from left to right seperated by a space
         `);
     }
 }

@@ -57,6 +57,9 @@ client.on("message", message => {
         case "whosonfirst":
             client.commands.get("whosonfirst").execute(message, args);
             break;
+        case "memory":
+            client.commands.get("memory").execute(message, args);
+            break;
         default:
             message.channel.send("Invalid Command");
             break;
