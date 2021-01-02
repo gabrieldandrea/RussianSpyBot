@@ -1,5 +1,7 @@
 const Discord = require('discord.js');
-const client = new Discord.Client()
+const client = new Discord.Client();
+
+var token = config.TOKEN;
 
 const prefix = "!";
 const fs = require("fs");
@@ -66,4 +68,4 @@ client.on("message", message => {
     }
 });
 
-client.login("NzkzMjcxNDUwNTU0NTk3NDE2.X-p1nA.1-oWfW_oAxCgn-ZJb74DaPuyCX0");
+client.login(token);
