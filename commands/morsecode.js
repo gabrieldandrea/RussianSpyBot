@@ -50,7 +50,7 @@ module.exports = {
             "beats" : "3.600 MHz"
         };
         var letters = [];
-        message.reply("Enter the ordered letters in dots and dashes, seperate the letters by a space. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Enter the ordered letters in dots and dashes, separate the letters by a space. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase();
 

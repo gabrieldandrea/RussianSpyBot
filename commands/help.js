@@ -13,7 +13,7 @@ module.exports = {
 **!simonsays** - Explains how to defuse simon says, input if the serial number contains a vowel and the number of strikes
 **!whosonfirst** - Explains how to defuse who's on first, input the display word and then the label on the button
 **!memory** - Explains how to defuse memory, input the display number and then the button labels from left to right seperated by a space
-**!morsecode** - Explains how to defuse morse code, input the ordered letters in dots and dashes seperated by a space
+**!morsecode** - Explains how to defuse morse code, input the ordered letters in dots and dashes separated by a space
         `);
     }
 }
