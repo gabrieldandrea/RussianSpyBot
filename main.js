@@ -62,6 +62,9 @@ client.on("message", message => {
         case "memory":
             client.commands.get("memory").execute(message, args);
             break;
+        case "morsecode":
+            client.commands.get("morsecode").execute(message, args);
+            break;
         default:
             message.channel.send("Invalid Command");
             break;
