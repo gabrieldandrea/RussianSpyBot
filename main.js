@@ -68,6 +68,9 @@ client.on("message", message => {
         case "complicatedwires":
             client.commands.get("complicatedwires").execute(message, args);
             break;
+        case "wiresequences":
+            client.commands.get("wiresequences").execute(message, args);
+            break;
         default:
             message.channel.send("Invalid Command");
             break;

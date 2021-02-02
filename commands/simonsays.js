@@ -10,7 +10,7 @@ module.exports = {
         let noVowelsOneStrike = ["red => red", " blue => blue", " green => yellow", " yellow => green"];
         let noVowelsTwoStrike = ["red => yellow", " blue => green", " green => blue", " yellow => red"];
 
-        message.reply("Does the serial number contain a vowel? Enter the number of strikes. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Does the serial number contain a vowel? Input the number of strikes. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase().split(" ");
 

@@ -3,7 +3,7 @@ module.exports = {
     description: "Horizontal wires defusing kit",
     execute(message, args) {
         const filter = m => m.author.id === message.author.id;
-        message.reply("Enter the number of wires, these messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Input the number of wires, these messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase();
 

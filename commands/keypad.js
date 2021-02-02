@@ -11,7 +11,7 @@ module.exports = {
         let arr6 = ["6", "backe", "puzzle", "ae", "trident", "backn", "omega"];
         let bigarr = [arr1, arr2, arr3, arr4, arr5, arr6];
 
-        message.reply("Enter the symbols. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Input the symbols. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase().split(" ");
 

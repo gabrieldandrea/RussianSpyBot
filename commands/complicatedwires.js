@@ -3,7 +3,7 @@ module.exports = {
     description: "Complicated wires defusing kit",
     execute(message, args) {
         const filter = m => m.author.id === message.author.id;
-        message.reply("Enter the colour(s) of the wire, if there is a lit LED, enter 'led', and if there is a star, enter 'star'. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Input the colour(s) of the wire, if there is a lit LED, Input 'led', and if there is a star, Input 'star'. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase().split(" ");
 

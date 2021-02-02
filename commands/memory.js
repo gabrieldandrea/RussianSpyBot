@@ -4,7 +4,7 @@ module.exports = {
     execute(message, args) {
         const filter = m => m.author.id === message.author.id;
         var pastLabels = [];
-        message.reply("Enter the display number followed by the button labels in order from left to right seperated by a space. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
+        message.reply("Input the display number followed by the button labels in order from left to right seperated by a space. These messages will expire in 30 seconds").then(r => r.delete({ timeout: 30000 }));
         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
             let input = collected.first().content.toLowerCase().split(" ");
 
@@ -24,7 +24,7 @@ module.exports = {
                 pastLabels[1] = "4";
             }
 
-            message.reply("Enter the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
+            message.reply("Input the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
             message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
                 let input = collected.first().content.toLowerCase().split(" ");
 
@@ -49,7 +49,7 @@ module.exports = {
                     pastLabels[3] = pastLabels[1];
                 }
 
-                message.reply("Enter the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
+                message.reply("Input the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
                 message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
                     let input = collected.first().content.toLowerCase().split(" ");
 
@@ -86,7 +86,7 @@ module.exports = {
                         }
                     }
 
-                    message.reply("Enter the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
+                    message.reply("Input the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
                     message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
                         let input = collected.first().content.toLowerCase().split(" ");
 
@@ -106,7 +106,7 @@ module.exports = {
                             pastLabels[7] = pastLabels[3];
                         }
 
-                        message.reply("Enter the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
+                        message.reply("Input the display number followed by the button labels in order from left to right seperated by a space.").then(r => r.delete({ timeout: 30000 }));
                         message.channel.awaitMessages(filter, { max: 1, time: 30000 }).then(collected => {
                             let input = collected.first().content.toLowerCase().split(" ");
 
